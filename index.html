@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://calculator26.herokuapp.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="https://calculator26.herokuapp.com/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="https://calculator26.herokuapp.com/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="https://calculator26.herokuapp.com/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style>:root {
+  --primary: #rgb(227, 248, 39);
+  --dark: #414141;
+  --light: rgb(227, 248, 39);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: 'Fira Sans',sans-serif;
+}
+body{
+  background-color: var(--light);
+}
+.calculator {
+   width: 100%;
+   max-width: 400px;
+   background-color: rgb(138, 94, 94);
+   border-radius: 20px;
+   overflow: hidden;
+   box-shadow: 0px 2px 64px #000;
+}
+.display{
+  padding: 16px;
+  text-align: right;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 24px;
+  font-weight: 300;
+}
+.display span{
+  font-size: 14px;
+  color:rgb(230, 209, 29);
+}
+button{
+  -webkit-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  color:rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+button:hover {
+  opacity: 0.5;
+}
+
+.operators{
+  display: flex;
+}
+.operators button{
+  flex: 1 1;
+  background-color: var(--primary);
+  font-weight: 700;
+}
+.digits{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digits button {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  background-color: var(--dark);
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvaW5kZXguY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsNkJBQTZCO0VBQzdCLGVBQWU7RUFDZiwwQkFBMEI7QUFDNUI7QUFDQTtFQUNFLFNBQVM7RUFDVCxVQUFVO0VBQ1YscUJBQXFCO0VBQ3JCLG1DQUFtQztBQUNyQztBQUNBO0VBQ0UsOEJBQThCO0FBQ2hDO0FBQ0E7R0FDRyxXQUFXO0dBQ1gsZ0JBQWdCO0dBQ2hCLGtDQUFrQztHQUNsQyxtQkFBbUI7R0FDbkIsZ0JBQWdCO0dBQ2hCLDZCQUE2QjtBQUNoQztBQUNBO0VBQ0UsYUFBYTtFQUNiLGlCQUFpQjtFQUNqQiw2QkFBNkI7RUFDN0IsbUJBQW1CO0VBQ25CLGVBQWU7RUFDZixnQkFBZ0I7QUFDbEI7QUFDQTtFQUNFLGVBQWU7RUFDZix1QkFBdUI7QUFDekI7QUFDQTtFQUNFLHdCQUFnQjtVQUFoQixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLGFBQWE7RUFDYix3QkFBd0I7RUFDeEIsZUFBZTtFQUNmLGFBQWE7RUFDYixlQUFlO0VBQ2YsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7QUFDQTtFQUNFLFNBQVk7RUFDWixnQ0FBZ0M7RUFDaEMsZ0JBQWdCO0FBQ2xCO0FBQ0E7RUFDRSxhQUFhO0VBQ2IsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsNkJBQTZCO0FBQy9CIiwic291cmNlc0NvbnRlbnQiOlsiOnJvb3Qge1xuICAtLXByaW1hcnk6ICNyZ2IoMjI3LCAyNDgsIDM5KTtcbiAgLS1kYXJrOiAjNDE0MTQxO1xuICAtLWxpZ2h0OiByZ2IoMjI3LCAyNDgsIDM5KTtcbn1cbioge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIGJveC1zaXppbmc6Ym9yZGVyLWJveDtcbiAgZm9udC1mYW1pbHk6ICdGaXJhIFNhbnMnLHNhbnMtc2VyaWY7XG59XG5ib2R5e1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG59XG4uY2FsY3VsYXRvciB7XG4gICB3aWR0aDogMTAwJTtcbiAgIG1heC13aWR0aDogNDAwcHg7XG4gICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTM4LCA5NCwgOTQpO1xuICAgYm9yZGVyLXJhZGl1czogMjBweDtcbiAgIG92ZXJmbG93OiBoaWRkZW47XG4gICBib3gtc2hhZG93OiAwcHggMnB4IDY0cHggIzAwMDtcbn1cbi5kaXNwbGF5e1xuICBwYWRkaW5nOiAxNnB4O1xuICB0ZXh0LWFsaWduOiByaWdodDtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGZvbnQtc2l6ZTogMjRweDtcbiAgZm9udC13ZWlnaHQ6IDMwMDtcbn1cbi5kaXNwbGF5IHNwYW57XG4gIGZvbnQtc2l6ZTogMTRweDtcbiAgY29sb3I6cmdiKDIzMCwgMjA5LCAyOSk7XG59XG5idXR0b257XG4gIGFwcGVhcmFuY2U6IG5vbmU7XG4gIGJvcmRlcjogbm9uZTtcbiAgb3V0bGluZTogbm9uZTtcbiAgY29sb3I6cmdiKDI1NSwgMjU1LCAyNTUpO1xuICBmb250LXNpemU6IDIwcHg7XG4gIHBhZGRpbmc6IDE2cHg7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgdHJhbnNpdGlvbjogMC40cztcbn1cbmJ1dHRvbjpob3ZlciB7XG4gIG9wYWNpdHk6IDAuNTtcbn1cblxuLm9wZXJhdG9yc3tcbiAgZGlzcGxheTogZmxleDtcbn1cbi5vcGVyYXRvcnMgYnV0dG9ue1xuICBmbGV4OiAxIDEgMCU7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLXByaW1hcnkpO1xuICBmb250LXdlaWdodDogNzAwO1xufVxuLmRpZ2l0c3tcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xufVxuXG4uZGlnaXRzIGJ1dHRvbiB7XG4gIGZsZXg6IDEgMSAzMy4zMzMlO1xuICBtYXgtd2lkdGg6IDMzLjMzMyU7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWRhcmspO1xufSJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="calculator"><div class="display"><span>(10)</span>0</div><div class="operators"><button>/</button><button></button><button>+</button><button>-</button><button>DEL</button></div><div class="digits"><button>1</button><button>2</button><button>3</button><button>4</button><button>5</button><button>6</button><button>7</button><button>8</button><button>9</button><button>0</button><button>.</button><button>=</button></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js.download"></script><script src="./React App_files/vendors_main.chunk.js.download"></script><script src="./React App_files/main.chunk.js.download"></script>
+
+</body></html>
